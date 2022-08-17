@@ -1,0 +1,61 @@
+@layer components {
+  .Header {
+    //main header body
+    @apply sticky top-0 z-50 flex bg-white px-4 py-2  shadow-sm;
+    .logo {
+      @apply relative h-10 w-20 flex-shrink-0 cursor-pointer;
+    }
+    //left icon wraapper
+    .iconsWrapper {
+      @apply mx-7 flex items-center xl:min-w-[300px];
+
+      .icon {
+        @apply h-5 w-5;
+      }
+      p {
+        @apply ml-2 hidden flex-1 lg:inline;
+      }
+    }
+
+    //searchinput
+    .form {
+      @apply flex flex-1 items-center space-x-2 border-gray-200 rounded-sm border bg-gray-100 px-3 py-1;
+      input {
+        @apply flex-1 bg-transparent outline-none;
+      }
+      .icon {
+        @apply h-6 w-6 text-gray-400;
+      }
+    }
+
+    //right icon wrapper
+    .iconsWrapper2 {
+      @apply hidden mx-5 items-center space-x-2 text-gray-500 lg:inline-flex;
+      .icon {
+        @apply h-9 w-6 lg:w-9 cursor-pointer rounded-md lg:p-1 lg:hover:bg-gray-100 lg:hover:text-gray-900;
+      }
+      hr {
+        @apply h-10 border border-gray-100;
+      }
+    }
+
+    //menu
+    .menu {
+      @apply ml-5 flex items-center lg:hidden;
+      .icon {
+        @apply h-9 w-6 lg:w-9 cursor-pointer rounded-md lg:p-1 lg:hover:bg-gray-100 lg:hover:text-gray-900;
+      }
+    }
+
+     .signInandOut{
+        @apply hidden cursor-pointer items-center space-x-2 border border-gray-100 p-2 lg:flex;
+
+        .inner{ 
+            @apply relative h-5 w-5 flex-shrink-0;
+        }
+        p{
+            @apply text-gray-400;
+        }
+     }
+  }
+}

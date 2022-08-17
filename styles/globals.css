@@ -1,3 +1,53 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@layer components {
+  .Header {
+    @apply sticky top-0 z-50 flex bg-white px-4 py-2  shadow-sm;
+  }
+  .Header .logo {
+    @apply relative h-10 w-20 flex-shrink-0 cursor-pointer;
+  }
+  .Header .iconsWrapper {
+    @apply mx-7 flex items-center xl:min-w-[300px];
+  }
+  .Header .iconsWrapper .icon {
+    @apply h-5 w-5;
+  }
+  .Header .iconsWrapper p {
+    @apply ml-2 hidden flex-1 lg:inline;
+  }
+  .Header .form {
+    @apply flex flex-1 items-center space-x-2 border-gray-200 rounded-sm border bg-gray-100 px-3 py-1;
+  }
+  .Header .form input {
+    @apply flex-1 bg-transparent outline-none;
+  }
+  .Header .form .icon {
+    @apply h-6 w-6 text-gray-400;
+  }
+  .Header .iconsWrapper2 {
+    @apply hidden mx-5 items-center space-x-2 text-gray-500 lg:inline-flex;
+  }
+  .Header .iconsWrapper2 .icon {
+    @apply h-9 w-6 lg:w-9 cursor-pointer rounded-md lg:p-1 lg:hover:bg-gray-100 lg:hover:text-gray-900;
+  }
+  .Header .iconsWrapper2 hr {
+    @apply h-10 border border-gray-100;
+  }
+  .Header .menu {
+    @apply ml-5 flex items-center lg:hidden;
+  }
+  .Header .menu .icon {
+    @apply h-9 w-6 lg:w-9 cursor-pointer rounded-md lg:p-1 lg:hover:bg-gray-100 lg:hover:text-gray-900;
+  }
+  .Header .signInandOut {
+    @apply hidden cursor-pointer items-center space-x-2 border border-gray-100 p-2 lg:flex;
+  }
+  .Header .signInandOut .inner {
+    @apply relative h-5 w-5 flex-shrink-0;
+  }
+  .Header .signInandOut p {
+    @apply text-gray-400;
+  }
+}
